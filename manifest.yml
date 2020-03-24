@@ -1,0 +1,8 @@
+
+applications:
+  - name: newman_pcf_test
+    command: npm start
+    memory: 1G
+    timeout: 180
+    instances: 1
+    

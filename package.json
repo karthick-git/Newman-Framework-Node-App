@@ -1,0 +1,20 @@
+{
+  "name": "postman_poc",
+  "version": "1.0.0",
+  "description": "Newman node application - Automation framework",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "npm-run-all -p test:*",
+    "start": "newman run <postman collection URL> -r cli,slack --reporter-slack-channel '#<slack channel name>' --reporter-slack-webhook-url '<slack channel's webhook>'"
+  },
+  "engines": {
+    "node": "10.10.0"
+  },
+  "dependencies": {
+    "newman": "^4.5.4",
+    "newman-reporter-slack": "^1.1.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
